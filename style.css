@@ -1,0 +1,172 @@
+```css
+/* ベースカラー設定：黄色味をなくしたパステルピンク & クリーム */
+:root {
+  --primary-pink: #ffe0e9; /* 彩度を下げた、青み寄りのパステルピンク */
+  --secondary-pink: #ffedf1; /* 黄色味のない、ごく薄いピンク */
+  --light-cream: #f9f9f9; /* 黃色味を抑え、白に近づけたクリーム */
+  --text-dark: #333333; /* 濃いチャコールグレー */
+  --text-medium: #666666; /* ミディアムグレー */
+  --nav-green: #a8d5c4; /* 彩度を下げた、青み寄りのミントグリーン */
+}
+
+/* サイト全体 */
+body {
+  font-family: 'Yu Mincho', serif;
+  background-color: #ffffff; /* 完全な白 */
+  background-image: 
+    url('path/to/top-sakura-branches.png'), 
+    url('path/to/bottom-sakura-background.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: cover;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+/* ヘッダー */
+header {
+  background-color: var(--light-cream);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--secondary-pink);
+}
+
+.logo h1 {
+  font-size: 32px;
+  color: var(--nav-green);
+  margin: 0;
+}
+
+.logo h1 span {
+  font-size: 16px;
+  color: var(--text-medium);
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: var(--primary-pink);
+  border-radius: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border: 1px solid var(--primary-pink);
+  border-radius: 20px;
+}
+
+/* コンテンツエリア */
+main {
+  padding: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+/* 今週のピックアップ */
+.pickups {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.pickup-item {
+  background-color: #ffffff; /* 完全な白 */
+  border: 1px solid var(--primary-pink);
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+}
+
+.pickup-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* 最新投稿小説 */
+.latest-submissions {
+  margin-bottom: 40px;
+}
+
+.submission-item {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--secondary-pink);
+  padding: 20px 0;
+}
+
+.submission-item img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+/* サイドバー */
+.sidebar {
+  flex: 1;
+}
+
+.popular-ranking, .announcements {
+  background-color: #ffffff; /* 完全な白 */
+  border: 1px solid var(--primary-pink);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.popular-ranking ol {
+  counter-reset: ranking;
+  list-style: none;
+  padding: 0;
+}
+
+.popular-ranking li {
+  counter-increment: ranking;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.popular-ranking li::before {
+  content: counter(ranking);
+  background-color: var(--primary-pink);
+  color: var(--text-dark);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+/* フッター */
+footer {
+  background-color: var(--primary-pink);
+  color: var(--text-dark);
+  padding: 20px;
+  text-align: center;
+}
+
+```
