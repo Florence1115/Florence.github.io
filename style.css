@@ -1,179 +1,158 @@
-/* ===== CSS変数（必須修正） ===== */
+/* ==========================================================================
+   1. 共通設定と和風カラーの定義
+   ========================================================================== */
 :root {
-  --primary-pink: #ffe0e9;
-  --secondary-pink: #ffedf1;
-  --light-cream: #f9f9f9;
-  --text-dark: #333333;
-  --text-medium: #666666;
-  --nav-green: #a8d5c4;
+    /* 和風カラーパレット */
+    --bg-color: #fcfaf2;       /* 鳥の子色（とりのこいろ：温かみのある生成り） */
+    --text-color: #2b2b2b;     /* 墨色（真っ黒ではなく、目に優しい深いグレー） */
+    --cherry-pink: #fef4f4;    /* 桜色（薄いピンク・本文背景などのアクセント） */
+    --accent-red: #b94047;     /* 濃紅（こきくれない：引き締めの深い赤） */
+    --border-color: #e0d9ca;   /* 薄い和紙の境界線色 */
 }
 
-/* ===== サイト全体 ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: 'Yu Mincho', serif;
-  line-height: 2;
-  letter-spacing: 0.05em;
-  font-size: 16px;
-
-  background-color: #ffffff;
-  background-image: 
-    url('top-sakura-branches.png'), 
-    url('bottom-sakura-background.png');
-  background-repeat: no-repeat, no-repeat;
-  background-position: top center, bottom center;
-  background-size: contain, contain;
-
-  margin: 0;
-  color: var(--text-dark);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", serif;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
 }
 
-/* ===== ヘッダー ===== */
+a {
+    color: var(--accent-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #7a1f24; /* ホバー時は少し暗い赤に */
+}
+
+/* ==========================================================================
+   2. ヘッダーのデザイン（和風ロゴ）
+   ========================================================================== */
 header {
-  background-color: var(--light-cream);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--secondary-pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px dashed var(--border-color);
 }
 
-.logo h1 {
-  font-size: 32px;
-  color: var(--nav-green);
-  margin: 0;
+.site-logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    /* ほんのり縦書きのエッセンスを感じさせる文字飾りの設定など */
 }
 
-.logo h1 span {
-  font-size: 16px;
-  color: var(--text-medium);
-  display: block;
+.global-navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-/* ナビ */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
+.global-navigation a {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: bold;
-  padding: 10px 20px;
-  background-color: var(--primary-pink);
-  border-radius: 20px;
-  transition: 0.3s;
+/* ==========================================================================
+   3. トップページ専用：メインビジュアル（桜の背景を想定）
+   ========================================================================== */
+.hero-section {
+    height: 60vh;
+    background-color: var(--cherry-pink); /* ひとまず淡い桜色、ここに後で画像を設定可 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
 }
 
-/* ホバー効果 */
-nav a:hover {
-  background-color: var(--secondary-pink);
-  transform: translateY(-2px);
+/* 縦書きのキャッチコピー */
+.catchphrase {
+    writing-mode: vertical-rl;
+    font-size: 1.6rem;
+    line-height: 2;
+    height: 250px;
+    margin: 0 auto 20px auto;
+    font-weight: bold;
 }
 
-/* 検索バー */
-.search-bar {
-  display: flex;
-  gap: 10px;
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
-.search-bar input[type="text"] {
-  padding: 10px;
-  border: 1px solid var(--primary-pink);
-  border-radius: 20px;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #7a1f24;
 }
 
-/* ===== メインエリア ===== */
-main {
-  padding: 40px;
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  gap: 30px;
+/* ==========================================================================
+   4. トップページ専用：作品一覧（和紙カード風）
+   ========================================================================== */
+.works-section, .news-section, .profile-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.main-content {
-  flex: 3;
+h2 {
+    font-size: 1.4rem;
+    border-left: 4px solid var(--accent-red);
+    padding-left: 10px;
+    margin-bottom: 30px;
 }
 
-/* ===== カード共通（影追加） ===== */
-.pickup-item,
-.popular-ranking,
-.announcements {
-  background-color: #ffffff;
-  border: 1px solid var(--primary-pink);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-/* ピックアップ */
-.pickups {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
+.work-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
 }
 
-.pickup-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
+.work-card h3 {
+    margin-bottom: 10px;
 }
 
-/* 最新投稿 */
-.submission-item {
-  display: flex;
-  gap: 20px;
-  border-bottom: 1px solid var(--secondary-pink);
-  padding: 20px 0;
+.work-genre {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.submission-item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 5px;
+.work-story {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
 }
 
-/* ===== サイドバー ===== */
-.sidebar {
-  flex: 1;
-}
-
-/* ランキング */
-.popular-ranking ol {
-  list-style: none;
-  padding: 0;
-}
-
-.popular-ranking li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.popular-ranking li::before {
-  content: counter(list-item);
-  background-color: var(--primary-pink);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-/* ===== フッター ===== */
+/* ==========================================================================
+   5. フッター
+   ========================================================================== */
 footer {
-  background-color: var(--primary-pink);
-  color: var(--text-dark);
-  padding: 20px;
-  text-align: center;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    color: #888;
+    border-top: 1px solid var(--border-color);
 }
