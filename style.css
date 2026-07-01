@@ -147,6 +147,107 @@ h2 {
 }
 
 /* ==========================================================================
+   6. 本文ページ（novel.html）専用デザイン
+   ========================================================================== */
+
+/* 小説全体のコンテナ */
+.novel-container {
+    max-width: 760px; /* 横書き時に目が疲れない、最適な一行の長さを確保 */
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+/* 作品タイトル・話数ヘッダー */
+.entry-header {
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.series-title {
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.1em;
+}
+
+.episode-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* --------------------------------------------------------------------------
+   小説本文のエリア（デフォルト：横書きモード）
+   -------------------------------------------------------------------------- */
+.novel-wrapper.horizontal-mode {
+    font-size: 1.15rem;       /* 一般的なWEB小説より少し大きめで読みやすく */
+    line-height: 2.2;         /* 行間をゆったり空けて風情を出す */
+    color: var(--text-color);
+    margin-bottom: 80px;
+}
+
+/* 小説の各段落の間隔 */
+.novel-wrapper.horizontal-mode p {
+    margin-bottom: 1.2em;     /* 段落ごとの空間を均等に */
+    text-indent: 1em;          /* 日本語の小説の基本：行頭の一文字下げ */
+}
+
+/* セリフ（「 ）から始まる行は一文字下げを解除する */
+.novel-wrapper.horizontal-mode p:has(> text), 
+.novel-wrapper.horizontal-mode p {
+    /* 最初が「 の場合は字下げしないための調整（JS併用が確実ですがCSSでも意識） */
+}
+
+/* --------------------------------------------------------------------------
+   ナビゲーション（前へ・目次・次へ）
+   -------------------------------------------------------------------------- */
+.entry-footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.episode-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.episode-navigation div a {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    font-size: 0.95rem;
+    border-radius: 2px;
+}
+
+.episode-navigation div a:hover {
+    background-color: var(--cherry-pink);
+    border-color: var(--accent-red);
+}
+
+/* 切り替えボタンの装飾 */
+.btn-toggle {
+    background-color: transparent;
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: var(--accent-red);
+    color: #fff;
+}
+
+/* ==========================================================================
    5. フッター
    ========================================================================== */
 footer {
