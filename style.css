@@ -1,16 +1,15 @@
 ```css
 /* ベースカラー設定：黄色味をなくしたパステルピンク & クリーム */
-:root {
-  --primary-pink: #ffe0e9; /* 彩度を下げた、青み寄りのパステルピンク */
-  --secondary-pink: #ffedf1; /* 黄色味のない、ごく薄いピンク */
-  --light-cream: #f9f9f9; /* 黃色味を抑え、白に近づけたクリーム */
-  --text-dark: #333333; /* 濃いチャコールグレー */
-  --text-medium: #666666; /* ミディアムグレー */
-  --nav-green: #a8d5c4; /* 彩度を下げた、青み寄りのミントグリーン */
-}
+body {
+  primary-pink: #ffe0e9; /* 彩度を下げた、青み寄りのパステルピンク */
+  secondary-pink: #ffedf1; /* 黄色味のない、ごく薄いピンク */
+  light-cream: #f9f9f9; /* 黃色味を抑え、白に近づけたクリーム */
+  text-dark: #333333; /* 濃いチャコールグレー */
+  text-medium: #666666; /* ミディアムグレー */
+  nav-green: #a8d5c4; /* 彩度を下げた、青み寄りのミントグリーン */
+
 
 /* サイト全体 */
-body {
   font-family: 'Yu Mincho', serif;
   background-color: #ffffff; /* 完全な白 */
   background-image: 
