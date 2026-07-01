@@ -1,104 +1,80 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>桜の文庫箱 ｜ 創作小説プラットフォーム</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=index.html">
+    <title>あなたのサイト名（仮）</title>
+    </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <h1>桜の文庫箱<span>〜桜舞う創作小説の世界〜</span></h1>
-    </div>
-    
-    <nav>
-      <ul>
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#search">作品検索</a></li>
-        <li><a href="#ranking">ランキング</a></li>
-        <li><a href="#mypage">マイページ</a></li>
-      </ul>
-    </nav>
+    <header>
+        <div class="site-logo">
+            <h1>サイト名</h1> </div>
+        <nav class="global-navigation">
+            <ul>
+                <li><a href="#works">作品一覧</a></li>
+                <li><a href="#profile">プロフィール</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="search-bar">
-      <input type="text" placeholder="キーワード・作家名検索">
-    </div>
-  </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="catchphrase">「――その恋は、桜の如く。」</p>
+                <a href="novel.html" class="btn-primary">最新作を読む</a>
+            </div>
+        </section>
 
-  <main>
-    
-    <div class="main-content">
-      
-      <section class="pickups">
-        <article class="pickup-item">
-          <img src="path/to/cover1.jpg" alt="作品ジャケット">
-          <h3>春のまにまに</h3>
-          <p>著者：一ノ瀬</p>
-          <p>散りゆく桜の下で交わした、あの日の一言が今も胸を締め付ける。切ない恋を描いた短編小説。</p>
-        </article>
-        
-        <article class="pickup-item">
-          <img src="path/to/cover2.jpg" alt="作品ジャケット">
-          <h3>機械仕掛けの春</h3>
-          <p>著者：ハル</p>
-          <p>桜の木の下には、感情を持たないとされる古いアンドロイドが眠っていた。SFファンタジー大作。</p>
-        </article>
-      </section>
+        <section class="news-section">
+            <h2>更新履歴</h2>
+            <dl>
+                <dt>2026/07/01</dt>
+                <dd>短編『桜の記憶』を公開しました。</dd>
+                <dt>2026/06/25</dt>
+                <dd>サイトを開設しました。</dd>
+            </dl>
+        </section>
 
-      <section class="latest-submissions">
-        <h2>最新の投稿作品</h2>
-        
-        <article class="submission-item">
-          <img src="path/to/thumb1.jpg" alt="サムネイル">
-          <div class="submission-info">
-            <h3>桜の降る夜に君を想う</h3>
-            <p class="meta">文芸・恋愛 ｜ 著者：桜川 ｜ 更新：2026/07/01</p>
-            <p class="excerpt">夜桜を見上げていた私の前に現れたのは、かつて転校していった幼馴染だった……。</p>
-          </div>
-        </article>
+        <section id="works" class="works-section">
+            <h2>作品一覧</h2>
+            <div class="works-grid">
+                
+                <article class="work-card">
+                    <h3>作品タイトルA</h3>
+                    <p class="work-genre">ジャンル：和風ファンタジー / 連載中</p>
+                    <p class="work-story">
+                        ここに作品のあらすじが入ります。桜の木の下で出会った二人の物語……。
+                    </p>
+                    <a href="novel.html">目次を見る</a>
+                </article>
 
-        <article class="submission-item">
-          <img src="path/to/thumb2.jpg" alt="サムネイル">
-          <div class="submission-info">
-            <h3>あわい桜色の記憶</h3>
-            <p class="meta">エッセイ・ノンフィクション ｜ 著者：ミナミ ｜ 更新：2026/07/01</p>
-            <p class="excerpt">故郷の古い桜並木にまつわる、家族と私のささやかな思い出の記録。</p>
-          </div>
-        </article>
-      </section>
+                <article class="work-card">
+                    <h3>作品タイトルB</h3>
+                    <p class="work-genre">ジャンル：歴史・時代 / 完結</p>
+                    <p class="work-story">
+                        ここに二つ目の作品のあらすじが入ります。短編や読み切りの紹介など。
+                    </p>
+                    <a href="novel.html">作品を読む</a>
+                </article>
 
-    </div>
+            </div>
+        </section>
 
-    <aside class="sidebar">
-      
-      <section class="popular-ranking">
-        <h2>人気ランキング</h2>
-        <ol>
-          <li>神様の居眠り</li>
-          <li>放課後のチェリーブロッサム</li>
-          <li>夜桜の怪人</li>
-          <li>薄紅色のラブレター</li>
-          <li>さくら、ひらひら</li>
-        </ol>
-      </section>
+        <section id="profile" class="profile-section">
+            <h2>作者紹介</h2>
+            <div class="profile-content">
+                <p class="author-name">著者：あなたの名前</p>
+                <p class="author-bio">
+                    和風の小説や、桜をモチーフにした物語を好んで執筆しています。
+                </p>
+            </div>
+        </section>
+    </main>
 
-      <section class="announcements">
-        <h2>運営からのお知らせ</h2>
-        <ul>
-          <li>【コンテスト】「第3回 桜文芸大賞」応募受付開始のお知らせ</li>
-          <li>【メンテナンス】7月15日深夜 システムメンテナンスの実施について</li>
-        </ul>
-      </section>
-
-    </aside>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 桜の文庫箱. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2026 あなたの名前. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
