@@ -2,23 +2,103 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>小説置き場</title>
-  <style>
-    body {
-      max-width: 700px;
-      margin: auto;
-      font-family: sans-serif;
-      line-height: 1.8;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桜の文庫箱 ｜ 創作小説プラットフォーム</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>小説置き場</h1>
-  <p>ようこそ</p>
 
-  <ul>
-    <li><a href="story1.html">作品1</a></li>
-  </ul>
+  <header>
+    <div class="logo">
+      <h1>桜の文庫箱<span>〜桜舞う創作小説の世界〜</span></h1>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="#home">ホーム</a></li>
+        <li><a href="#search">作品検索</a></li>
+        <li><a href="#ranking">ランキング</a></li>
+        <li><a href="#mypage">マイページ</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-bar">
+      <input type="text" placeholder="キーワード・作家名検索">
+    </div>
+  </header>
+
+  <main>
+    
+    <div class="main-content">
+      
+      <section class="pickups">
+        <article class="pickup-item">
+          <img src="path/to/cover1.jpg" alt="作品ジャケット">
+          <h3>春のまにまに</h3>
+          <p>著者：一ノ瀬</p>
+          <p>散りゆく桜の下で交わした、あの日の一言が今も胸を締め付ける。切ない恋を描いた短編小説。</p>
+        </article>
+        
+        <article class="pickup-item">
+          <img src="path/to/cover2.jpg" alt="作品ジャケット">
+          <h3>機械仕掛けの春</h3>
+          <p>著者：ハル</p>
+          <p>桜の木の下には、感情を持たないとされる古いアンドロイドが眠っていた。SFファンタジー大作。</p>
+        </article>
+      </section>
+
+      <section class="latest-submissions">
+        <h2>最新の投稿作品</h2>
+        
+        <article class="submission-item">
+          <img src="path/to/thumb1.jpg" alt="サムネイル">
+          <div class="submission-info">
+            <h3>桜の降る夜に君を想う</h3>
+            <p class="meta">文芸・恋愛 ｜ 著者：桜川 ｜ 更新：2026/07/01</p>
+            <p class="excerpt">夜桜を見上げていた私の前に現れたのは、かつて転校していった幼馴染だった……。</p>
+          </div>
+        </article>
+
+        <article class="submission-item">
+          <img src="path/to/thumb2.jpg" alt="サムネイル">
+          <div class="submission-info">
+            <h3>あわい桜色の記憶</h3>
+            <p class="meta">エッセイ・ノンフィクション ｜ 著者：ミナミ ｜ 更新：2026/07/01</p>
+            <p class="excerpt">故郷の古い桜並木にまつわる、家族と私のささやかな思い出の記録。</p>
+          </div>
+        </article>
+      </section>
+
+    </div>
+
+    <aside class="sidebar">
+      
+      <section class="popular-ranking">
+        <h2>人気ランキング</h2>
+        <ol>
+          <li>神様の居眠り</li>
+          <li>放課後のチェリーブロッサム</li>
+          <li>夜桜の怪人</li>
+          <li>薄紅色のラブレター</li>
+          <li>さくら、ひらひら</li>
+        </ol>
+      </section>
+
+      <section class="announcements">
+        <h2>運営からのお知らせ</h2>
+        <ul>
+          <li>【コンテスト】「第3回 桜文芸大賞」応募受付開始のお知らせ</li>
+          <li>【メンテナンス】7月15日深夜 システムメンテナンスの実施について</li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 桜の文庫箱. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
