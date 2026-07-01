@@ -183,9 +183,42 @@ h2 {
    -------------------------------------------------------------------------- */
 .novel-wrapper.horizontal-mode {
     font-size: 1.15rem;       /* 一般的なWEB小説より少し大きめで読みやすく */
-    line-height: 2.2;         /* 行間をゆったり空けて風情を出す */
+    line-height: 2.0;         /* 行間をゆったり空けて風情を出す */
     color: var(--text-color);
     margin-bottom: 80px;
+   margin: 40px auto;
+    padding: 30px 40px;          /* 上下30px、左右40pxのゆったりとした余白 */
+    background-color: #fff;       /* 読書エリアを和紙の1ページのように見せる */
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   7. 縦書きモード（vertical-mode）のスタイル
+   ========================================================================== */
+
+.novel-wrapper.vertical-mode {
+    writing-mode: vertical-rl;   /* 文字を縦書き、行を右から左へ */
+    font-size: 1.15rem;
+    line-height: 2.4;            /* 縦書きは横書きより少し広めの行間が美しい */
+    
+    /* 全方向の余白設定 */
+    height: 65vh;                /* 縦書きの「高さ」を固定して、はみ出た分を横スクロールに */
+    margin: 40px auto;
+    padding: 30px 40px;          /* 上下30px、左右40pxのゆったりとした余白 */
+    background-color: #fff;       /* 読書エリアを和紙の1ページのように見せる */
+    border: 1px solid var(--border-color);
+    
+    /* 横スクロールの設定 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかに */
+}
+
+/* 縦書き時の段落設定 */
+.novel-wrapper.vertical-mode p {
+    margin-left: 1.5em;          /* 行と行の間隔（縦書きなので「左側」に余白をあける） */
+    margin-bottom: 0;            /* 横書き用の下余白をリセット */
+    text-indent: 1em;            /* 縦書きでも行頭の一文字下げを維持 */
 }
 
 /* 小説の各段落の間隔 */
